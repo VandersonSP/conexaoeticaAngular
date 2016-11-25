@@ -6,4 +6,7 @@ import {Component} from '@angular/core';
     templateUrl: './forms.component.html'
 })
 
-export class FormComponent {}
+export class FormComponent {
+  termosaceitos:boolean = false;
+  anonimo:any = null;
+}

@@ -10,11 +10,13 @@ import { LoginModule } from './login/login.module';
 import { SignupModule } from './signup/signup.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { SharedModule } from './shared/shared.module';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
 	imports: [
 		BrowserModule,
 		HttpModule,
+    FormsModule,
 		RouterModule.forRoot(routes),
 		LoginModule,
 		SignupModule,
