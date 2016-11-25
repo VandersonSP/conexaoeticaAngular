@@ -38,10 +38,9 @@ export class HomeComponent {
 	index: number = 0;
 	slides: Array<any> = [];
 	imgUrl: Array<any> = [
-		`assets/img/slider1.jpg`,
-		`assets/img/slider2.jpg`,
-		`assets/img/slider3.jpg`,
-		`assets/img/slider0.jpg`
+		`http://conexaoeticacarrefour.com.br/images/ouvidoria.jpg`,
+		`http://conexaoeticacarrefour.com.br/images/22.png`,
+		`http://conexaoeticacarrefour.com.br/images/1.png`
 	];
 	/* END */
 	/* Alert component */
@@ -63,7 +62,7 @@ export class HomeComponent {
 	/* END*/
 
 	constructor() {
-		for (let i = 0; i < 4; i++) {
+		for (let i = 0; i < 3; i++) {
 			this.addSlide();
 		}
 	}
@@ -73,8 +72,8 @@ export class HomeComponent {
 		let i = this.slides.length;
 		this.slides.push({
 			image: this.imgUrl[i],
-			text: `${['Dummy ', 'Dummy ', 'Dummy ', 'Dummy '][this.slides.length % 4]}
-      			${['text 0', 'text 1', 'text 2', 'text 3'][this.slides.length % 4]}`
+			text: `${[' ', ' ', '  ', '  '][this.slides.length % 3]}
+      			${['', ' ', '  ', '  '][this.slides.length % 3]}`
 		});
 	}
 	/* END */
