@@ -7,6 +7,6 @@ import {Component} from '@angular/core';
 })
 
 export class FormComponent {
-  termosaceitos:boolean = false;
+  termosaceitos:any = false;
   anonimo:any = null;
 }
