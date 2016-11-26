@@ -10,6 +10,7 @@ import { BSComponentRoutes } from './bs-component/index';
 import { BSElementRoutes } from './bs-element/index';
 
 import { DashboardComponent } from './index';
+import {ChartComponent} from "./charts/chart.component";
 
 export const DashboardRoutes: Route[] = [
   	{
@@ -23,7 +24,8 @@ export const DashboardRoutes: Route[] = [
 	    	...BlankPageRoutes,
         ...FormRoutes,
         ...GridRoutes,
-        ...BSElementRoutes
+        ...BSElementRoutes,
+        { path: '**', component: ChartComponent }
     	]
   	}
 ];
