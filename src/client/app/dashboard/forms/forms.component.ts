@@ -8,6 +8,7 @@ import {Component} from "@angular/core";
 
 export class FormComponent {
   requiredOption:boolean = true;
+  finishRelat:boolean = false;
   termosaceitos:boolean = false;
   anonimo:any = null;
 
@@ -16,7 +17,14 @@ export class FormComponent {
       this.requiredOption = false;
     } else {
       this.termosaceitos = true;
+      this.finishRelat = true;
     }
+  }
+
+  finishRelatFalse():void {
+    this.finishRelat = false;
+    this.anonimo = null;
+    this.termosaceitos = false;
   }
 
 }

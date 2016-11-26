@@ -6,11 +6,17 @@
         Realizar relatos
       </h2>
       <ol class="breadcrumb">
-        <li>
-          <i class="fa fa-home"></i> <a href="Javascript:void(0)" routerLink="/conexaoeticacarrefour/home">Início</a>
+        <li >
+          <i class="fa fa-home"></i><a routerLink="/conexaoeticacarrefour/home">Início</a>
         </li>
-        <li class="active">
-          <i class="fa fa-edit"></i> Realizar relatos
+        <li  [hidden]="!termosaceitos" (click)="finishRelatFalse()" style="cursor: pointer">
+          <i class="fa fa-edit"></i><a>Realizar relatos</a>
+        </li>
+        <li class="active" [hidden]="termosaceitos">
+          <i class="fa fa-edit"></i>Realizar relatos
+        </li>
+        <li class="active" [hidden]="!finishRelat">
+          <i class="fa fa-send"></i>Envio do relato
         </li>
       </ol>
     </div>
@@ -58,8 +64,6 @@
 
       <div class="col-lg-1" style="padding: 0;">
         <button (click)="anonimo = false" class="btn-sm btn-primary " style="border-bottom-color: red">Sim</button>
-      </div>
-      <div class="col-lg-1">
         <button (click)="anonimo = true" class="btn-sm btn-secondary" style="border-bottom-color: red">Não</button>
       </div>
 

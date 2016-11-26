@@ -3,15 +3,18 @@
 </button>
 <nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
     <ul class="list-group">
-        <a routerLink="/conexaoeticacarrefour/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-home"></i> Início
-        </a>
-        <a [routerLink]="['chart']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-bar-chart-o"></i> Charts
-        </a>
-        <a [routerLink]="['tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
-            <i class="fa fa-fw fa-table"></i> Tables
-        </a>
+      <a routerLink="/conexaoeticacarrefour/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <i class="fa fa-fw fa-home"></i> Início
+      </a>
+      <a routerLink="/conexaoeticacarrefour/relato" [routerLinkActive]="['router-link-active']" class="list-group-item">
+        <i class="fa fa-edit"></i> Realizar relatos
+      </a>
+        <!--<a [routerLink]="['chart']" [routerLinkActive]="['router-link-active']" class="list-group-item">-->
+            <!--<i class="fa fa-fw fa-bar-chart-o"></i> Charts-->
+        <!--</a>-->
+        <!--<a [routerLink]="['tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">-->
+            <!--<i class="fa fa-fw fa-table"></i> Tables-->
+        <!--</a>-->
         <!--<a [routerLink]="['forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">-->
             <!--<i class="fa fa-fw fa-edit"></i> Forms-->
         <!--</a>-->
