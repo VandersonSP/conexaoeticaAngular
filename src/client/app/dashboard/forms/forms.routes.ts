@@ -4,7 +4,7 @@ import { FormComponent } from './index';
 
 export const FormRoutes: Route[] = [
 	{
-		path: 'forms',
+		path: 'relato',
 		component: FormComponent
 	},
 ];
