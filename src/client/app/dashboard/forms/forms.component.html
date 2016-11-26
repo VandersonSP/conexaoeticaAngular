@@ -17,63 +17,177 @@
   </div>
   <!-- /.row -->
 
-  <div class="row" [hidden]="step1">
-    <div class="col-lg-12">
-      <p>Este é um canal exclusivo do Grupo Carrefour para comunicação segura e, se desejada, anônima, de condutas
-        consideradas antiéticas ou que violem os princípios éticos e padrões de conduta e/ou a legislação vigente.
-<br>
-        As informações aqui registradas são de responsabilidade do relator. Elas serão recebidas, verificadas e
-        analisadas de forma transparente e imparcial, assegurando sigilo absoluto, tratamento adequado e sem conflitos
-        de interesse.
-<br>
+  <div class="row" [hidden]="termosaceitos">
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Este é um canal exclusivo do Grupo Carrefour para comunicação segura e, se desejada, anônima, de condutas
+          consideradas antiéticas ou que violem os princípios éticos e padrões de conduta e/ou a legislação vigente.
+          <br>
+          As informações aqui registradas são de responsabilidade do relator. Elas serão recebidas, verificadas e
+          analisadas de forma transparente e imparcial, assegurando sigilo absoluto, tratamento adequado e sem conflitos
+          de interesse.
+          <br>
 
-        Você também tem a opção de realizar seu relato pelo telefone 0800-772 2975 de segunda a sábado das 08h às
-        20h.</p>
+          Você tem a opção de realizar seu relato pelo telefone 0800-772 2975 de segunda a sábado das 08h às
+          20h.</p>
+      </div>
     </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <p>
+          Você também pode escolher fazer um relato anônimo ou pode identificar-se.
+          <br>
+          A opção identificada é voltada para os casos em que o relator se disponibiliza a ser contatado para
+          esclarecimento de possíveis dúvidas sobre o conteúdo fornecido.
+          <br>
+
+          Relatos com identificação são muito importantes, pois permitem que a apuração seja mais efetiva. Lembramos que
+          este é um canal seguro e confiável.
+        </p>
+      </div>
+    </div>
+
+    <div class="row" [hidden]="requiredOption">
+
+      <div class="col-md-3" style="padding-right: 0;">
+        <div class="form-group has-danger">
+          <label class="form-control-label"><strong>Você quer se identificar?</strong></label>
+        </div>
+      </div>
+
+      <div class="col-lg-1" style="padding: 0;">
+        <button (click)="anonimo = false" class="btn-sm btn-primary " style="border-bottom-color: red">Sim</button>
+      </div>
+      <div class="col-lg-1">
+        <button (click)="anonimo = true" class="btn-sm btn-secondary" style="border-bottom-color: red">Não</button>
+      </div>
+
+    </div>
+
+    <div class="row" [hidden]="!requiredOption">
+
+      <div class="col-md-3" style="padding-right: 0;">
+        <div class="form-group">
+          <label class="form-control-label">Você quer se identificar?</label>
+        </div>
+      </div>
+
+      <div class="col-lg-1" style="padding: 0;">
+        <button (click)="anonimo = false" class="btn-sm btn-primary ">Sim</button>
+      </div>
+      <div class="col-lg-1">
+        <button (click)="anonimo = true" class="btn-sm btn-secondary">Não</button>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 20px;">
+      <div class="col-lg-12">
+        <button (click)="aceitarTermos()" class="btn btn-primary">Concordo com os termos acima</button>
+      </div>
+    </div>
+
   </div>
 
-  <div class="row" [hidden]="step1">
-    <div class="col-lg-12">
-      <button (click)="termosaceitos = true" class="btn btn-primary">Concordo com os termos acima</button>
-    </div>
+  <div class="row" [hidden]="!termosaceitos">
+  <div class="row" [hidden]="anonimo">
+    <!--sim-->
+    * Nome
+
+    * Função
+
+    Por favor, preencha um dos campos abaixo:
+    E-mail
+
+    E-mail para contato
+    Telefone
+
+    Celular
+
+
+    Realizar relato
+
+    Por favor, descreva a situação que o motiva a procurar este canal. É importante que seu relato seja completo e detalhado. Não se esqueça de incluir na descrição:
+
+    • O quê (descrição da situação)
+    • Quem (nome das pessoas envolvidas, função, setor, inclusive testemunhas)
+    • Quando (data em que aconteceu, acontece ou acontecerá a situação)
+    • Onde (local do relato)
+    • Por que (a causa ou motivo)
+    • Quanto (se for possível medir)
+    • Provas (se elas existem e onde podem ser encontradas)
+
+    Para acompanhar o andamento de seu relato, você receberá um número de protocolo que será fornecido após este registro.
+
+    Agradecemos sua iniciativa e confiança.
+
+
+    Dados do incidente
+
+    * Tipo do relato
+    * Localidade do relato
+
+    * Bairro / Endereço / Loja
+
+    * Dados do(s) envolvido(s): Nome, Função, Loja
+
+    * Descrição
+
+    Este relato está ligado a outro registro anterior? Em caso positivo, por favor, informe o número do protocolo anterior:
+
+
+
+    Se você quiser anexar arquivos como fotos e documentos, adicione-os aqui. O tamanho máximo do conjunto de arquivos é de 20 MB.
+
+
+    Anexar arquivo
+    Cancelar
+    Enviar
+
   </div>
 
-  <div class="row" [hidden]="step2">
-    <div class="col-lg-12">
-      <p>
-        Você pode escolher fazer um relato anônimo ou pode identificar-se.
-<br>
-        A opção identificada é voltada para os casos em que o relator se disponibiliza a ser contatado para esclarecimento de possíveis dúvidas sobre o conteúdo fornecido.
-<br>
+  <div class="row" [hidden]="!anonimo">
+    <!--não-->
+    Realizar relato
 
-        Relatos com identificação são muito importantes, pois permitem que a apuração seja mais efetiva. Lembramos que este é um canal seguro e confiável.
-<br>
+    Por favor, descreva a situação que o motiva a procurar este canal. É importante que seu relato seja completo e detalhado. Não se esqueça de incluir na descrição:
 
-        Você quer se identificar?</p>
-    </div>
+    • O quê (descrição da situação)
+    • Quem (nome das pessoas envolvidas, função, setor, inclusive testemunhas)
+    • Quando (data em que aconteceu, acontece ou acontecerá a situação)
+    • Onde (local do relato)
+    • Por que (a causa ou motivo)
+    • Quanto (se for possível medir)
+    • Provas (se elas existem e onde podem ser encontradas)
+
+    Para acompanhar o andamento de seu relato, você receberá um número de protocolo que será fornecido após este registro.
+
+    Agradecemos sua iniciativa e confiança.
+
+
+    Dados do incidente
+
+    * Tipo do relato
+    * Localidade do relato
+
+    * Bairro / Endereço / Loja
+
+    * Dados do(s) envolvido(s): Nome, Função, Loja
+
+    * Descrição
+
+    Este relato está ligado a outro registro anterior? Em caso positivo, por favor, informe o número do protocolo anterior:
+
+
+
+    Se você quiser anexar arquivos como fotos e documentos, adicione-os aqui. O tamanho máximo do conjunto de arquivos é de 20 MB.
+
+
+    Anexar arquivo
+
+    Enviar fim
   </div>
-
-  <div class="row" [hidden]="step2">
-    <div class="col-lg-1 col-lg-offset-5">
-      <button (click)="anonimo = false" class="btn btn-primary">Sim</button>
-    </div>
-    <div class="col-lg-1">
-      <button (click)="anonimo = true" class="btn btn-secondary">Não</button>
-    </div>
   </div>
-
-  <div class="row" [hidden]="anonimamente">
-    <div class="col-lg-3">
-identificados :
-    </div>
-    </div>
-
-  <div class="row" [hidden]="identificacao">
-    <div class="col-lg-3">
-anonimo :
-    </div>
-    </div>
-
 
 
   <div class="row" [hidden]="true">
